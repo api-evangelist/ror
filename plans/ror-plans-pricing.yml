@@ -1,0 +1,82 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+provider: ROR
+providerId: ror
+created: '2026-06-12'
+modified: '2026-06-12'
+reconciled: true
+
+description: >-
+  ROR provides free, open access to its REST API and registry data under the CC0
+  license. No API key is currently required, but beginning Q3 2026, a free
+  client ID will be required to maintain the standard rate limit. Registration
+  for a client ID is available at no cost at https://ror.org/api-client-id.
+
+plans:
+
+  - name: Free (No Client ID)
+    description: >-
+      Open access to the ROR REST API without registration. Currently provides
+      2,000 requests per 5-minute period per IP address. After Q3 2026, this
+      tier will be reduced to 50 requests per 5-minute period for unidentified
+      clients.
+    type: free
+    url: https://ror.readme.io/docs/rest-api
+    entries:
+
+      - name: API Requests (Current)
+        description: Number of API requests allowed per 5-minute window without a client ID
+        type: quota
+        unit: requests
+        limit: 2000
+        timeFrame: PT5M
+        price: 0.00
+        currency: USD
+
+      - name: API Requests (Post Q3 2026)
+        description: Reduced request limit per 5-minute window after Q3 2026 without client ID
+        type: quota
+        unit: requests
+        limit: 50
+        timeFrame: PT5M
+        price: 0.00
+        currency: USD
+
+      - name: Data Dump Access
+        description: Full dataset download via Zenodo (120,000+ records), CC0 licensed
+        type: boolean
+        limit: true
+        price: 0.00
+        currency: USD
+
+  - name: Free (With Client ID)
+    description: >-
+      Open access to the ROR REST API with a registered client ID. Maintains
+      the standard 2,000 requests per 5-minute period after Q3 2026. Client ID
+      registration is free at https://ror.org/api-client-id.
+    type: freemium
+    url: https://ror.org/api-client-id
+    entries:
+
+      - name: API Requests
+        description: Number of API requests allowed per 5-minute window with a client ID
+        type: quota
+        unit: requests
+        limit: 2000
+        timeFrame: PT5M
+        price: 0.00
+        currency: USD
+
+      - name: Client ID Registration
+        description: Free registration for a client ID to maintain standard rate limits
+        type: boolean
+        limit: true
+        price: 0.00
+        currency: USD
+
+      - name: Data Dump Access
+        description: Full dataset download via Zenodo (120,000+ records), CC0 licensed
+        type: boolean
+        limit: true
+        price: 0.00
+        currency: USD

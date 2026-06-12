@@ -1,0 +1,60 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: ROR
+providerId: ror
+created: '2026-06-12'
+modified: '2026-06-12'
+
+description: >-
+  The ROR REST API enforces rate limits per IP address. Currently, the limit is
+  2,000 requests per 5-minute period with no client ID required. Beginning Q3
+  2026, clients without a registered client ID will be reduced to 50 requests
+  per 5-minute period. Clients that register a free client ID at
+  https://ror.org/api-client-id will retain the 2,000 requests per 5-minute
+  limit. Rate limit headers are returned with API responses.
+
+retryAfter: Retry-After
+throttled: 429
+
+limits:
+
+  - scope: ip
+    metric: requests
+    limit: 2000
+    timeFrame: PT5M
+    description: >-
+      Current standard limit: 2,000 requests per 5-minute period per IP address,
+      applicable to all clients regardless of client ID status until Q3 2026.
+
+  - scope: ip-no-client-id
+    metric: requests
+    limit: 50
+    timeFrame: PT5M
+    description: >-
+      Post Q3 2026 limit for unidentified clients: 50 requests per 5-minute
+      period per IP address for API requests made without a registered client ID.
+
+  - scope: ip-with-client-id
+    metric: requests
+    limit: 2000
+    timeFrame: PT5M
+    description: >-
+      Post Q3 2026 standard limit for identified clients: 2,000 requests per
+      5-minute period per IP address for API requests made with a registered
+      free client ID.
+
+  - scope: global
+    metric: results
+    limit: 10000
+    timeFrame: null
+    description: >-
+      Maximum number of records retrievable via the API per query. For complete
+      dataset access (120,000+ records), users must download the full data dump
+      via Zenodo.
+
+notes:
+  - "Client ID registration is free and available at https://ror.org/api-client-id"
+  - "Client ID requirement takes effect Q3 2026"
+  - "No authentication headers are required prior to Q3 2026"
+  - "Health check endpoint available at https://api.ror.org/heartbeat"
+  - "Status page available at https://ror1.statuspage.io/"

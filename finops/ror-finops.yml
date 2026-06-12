@@ -1,0 +1,84 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+provider: ROR
+providerId: ror
+created: '2026-06-12'
+modified: '2026-06-12'
+
+description: >-
+  ROR operates as a fully open, CC0-licensed registry with no direct cost to
+  API consumers. All registry data and API access are provided free of charge.
+  Beginning Q3 2026, a free client ID registration is required to maintain
+  standard rate limits. The primary FinOps consideration is tracking API
+  consumption to avoid rate limiting, and registering a client ID to ensure
+  continued high-throughput access at no cost.
+
+billingModel: free
+
+focusColumns:
+  - ChargeCategory
+  - ChargeType
+  - ResourceId
+  - ResourceType
+  - UsageQuantity
+  - UsageUnit
+  - BilledCost
+  - EffectiveCost
+
+meters:
+
+  - name: API Requests
+    description: Count of HTTP requests made to the ROR REST API endpoints
+    unit: requests
+    scope: ip-per-5-minutes
+    rateLimit: 2000
+    cost: 0.00
+    currency: USD
+    notes: >-
+      No cost associated. Rate limiting enforced at 2,000 requests per 5-minute
+      window per IP. Post Q3 2026, client ID required to maintain this limit.
+
+  - name: Data Dump Downloads
+    description: Full dataset downloads from Zenodo (120,000+ organization records)
+    unit: downloads
+    scope: global
+    cost: 0.00
+    currency: USD
+    notes: >-
+      No cost associated. Data is CC0 licensed and available via Zenodo at no
+      charge. Recommended for bulk processing needs exceeding 10,000 records.
+
+  - name: Client ID Registration
+    description: One-time registration for a free API client ID
+    unit: registrations
+    scope: per-client
+    cost: 0.00
+    currency: USD
+    notes: >-
+      No cost associated. Required after Q3 2026 to maintain standard rate
+      limits. Register at https://ror.org/api-client-id.
+
+principles:
+
+  - name: Visibility
+    description: >-
+      Track API request volume per IP address to anticipate rate limit
+      boundaries. Monitor usage against the 2,000 requests/5-minute threshold.
+      Register a client ID before Q3 2026 to maintain visibility into usage
+      patterns and avoid service disruption.
+    actions:
+      - Monitor request volume against 2,000 requests per 5-minute rate limit
+      - Register a free client ID at https://ror.org/api-client-id prior to Q3 2026
+      - Use the health check endpoint (https://api.ror.org/heartbeat) to confirm API availability
+      - Monitor service status at https://ror1.statuspage.io/
+
+  - name: Optimization
+    description: >-
+      Optimize API usage by batching queries efficiently and using the data dump
+      for bulk access needs exceeding 10,000 records. Implement caching for
+      frequently requested organization records to reduce repeated API calls.
+    actions:
+      - Use full data dump via Zenodo for bulk processing (>10,000 records)
+      - Cache ROR ID lookup results to minimize repeated API calls
+      - Use advanced query parameters to retrieve targeted subsets rather than paginating all records
+      - Implement exponential backoff for 429 rate-limit responses

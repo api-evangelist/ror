@@ -1,0 +1,92 @@
+aid: ror
+name: ROR
+description: >-
+  ROR (Research Organization Registry) is a global, community-led, curated
+  registry of open persistent identifiers for research organizations. It
+  provides unique, stable identifiers (ROR IDs) for over 120,000 universities,
+  companies, government labs, nonprofits, and other organizations involved in
+  scholarly research. The registry is maintained collaboratively by California
+  Digital Library, Crossref, and DataCite, with all data available under the
+  CC0 license. ROR offers a free REST API for querying, searching, and
+  retrieving organization records, and is integrated as the preferred
+  organization identifier across Crossref, DataCite, and ORCID platforms.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Research
+  - Organizations
+  - Identifiers
+  - Registry
+  - Scholarly
+  - Open Data
+  - Persistent Identifiers
+url: https://raw.githubusercontent.com/api-evangelist/ror/refs/heads/main/apis.yml
+created: '2026-06-12'
+modified: '2026-06-12'
+specificationVersion: '0.19'
+
+apis:
+
+  - aid: ror-rest-api
+    name: ROR REST API
+    description: >-
+      The ROR REST API provides programmatic access to the Research Organization
+      Registry, enabling users to retrieve, search, filter, and match
+      organization records by name, identifier, affiliation text, or metadata
+      fields. Returns JSON responses with full record details including names,
+      locations, external IDs, and organizational relationships.
+    humanURL: https://ror.readme.io/docs/rest-api
+    baseURL: https://api.ror.org
+    tags:
+      - Research Organizations
+      - Identifiers
+      - Registry
+      - Search
+      - Affiliation Matching
+    properties:
+      - type: Documentation
+        url: https://ror.readme.io/docs/rest-api
+      - type: OpenAPI
+        url: https://ror.readme.io/llms.txt
+      - type: Versioning
+        url: https://ror.readme.io/docs/basics
+
+common:
+
+  - type: Website
+    url: https://ror.org/
+
+  - type: Documentation
+    url: https://ror.readme.io/
+
+  - type: GitHubOrganization
+    url: https://github.com/ror-community
+
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/ror-research-organization-registry
+
+  - type: Blog
+    url: https://ror.org/blog/
+
+  - type: Pricing
+    url: https://ror.org/api-client-id
+
+  - type: StatusPage
+    url: https://ror1.statuspage.io/
+
+  - type: X
+    url: https://twitter.com/ResearchOrgs
+
+  - type: Plans
+    url: plans/ror-plans-pricing.yml
+
+  - type: RateLimits
+    url: rate-limits/ror-rate-limits.yml
+
+  - type: FinOps
+    url: finops/ror-finops.yml
+
+maintainers:
+
+  - FN: Kin Lane
+    email: kin@apievangelist.com
