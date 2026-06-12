@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "ror": "https://ror.org/",
+    "rorId": {
+      "@id": "ror:id",
+      "@type": "@id"
+    },
+    "Organization": "schema:Organization",
+    "name": "schema:name",
+    "alternateName": "schema:alternateName",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "location": "schema:location",
+    "addressCountry": "schema:addressCountry",
+    "addressLocality": "schema:addressLocality",
+    "identifier": "schema:identifier",
+    "sameAs": {
+      "@id": "schema:sameAs",
+      "@type": "@id"
+    },
+    "foundingDate": "schema:foundingDate",
+    "parentOrganization": {
+      "@id": "schema:parentOrganization",
+      "@type": "@id"
+    },
+    "memberOf": {
+      "@id": "schema:memberOf",
+      "@type": "@id"
+    },
+    "rorTypes": {
+      "@id": "ror:types"
+    },
+    "established": {
+      "@id": "ror:established"
+    },
+    "status": {
+      "@id": "ror:status"
+    },
+    "externalIds": {
+      "@id": "ror:externalIds"
+    },
+    "gridId": {
+      "@id": "ror:gridId"
+    },
+    "isni": {
+      "@id": "ror:isni"
+    },
+    "wikidata": {
+      "@id": "ror:wikidata"
+    },
+    "fundref": {
+      "@id": "ror:fundref"
+    },
+    "domains": {
+      "@id": "ror:domains"
+    },
+    "links": {
+      "@id": "ror:links",
+      "@type": "@id"
+    },
+    "wikipedia_url": {
+      "@id": "ror:wikipedia_url",
+      "@type": "@id"
+    },
+    "relationships": {
+      "@id": "ror:relationships"
+    },
+    "acronyms": {
+      "@id": "ror:acronyms"
+    },
+    "labels": {
+      "@id": "ror:labels"
+    }
+  }
+}

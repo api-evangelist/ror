@@ -86,6 +86,12 @@ common:
   - type: FinOps
     url: finops/ror-finops.yml
 
+  - type: BlogFeed
+    url: blogs/blogs.json
+
+  - type: JSONLDContext
+    url: json-ld/ror-context.jsonld
+
 maintainers:
 
   - FN: Kin Lane

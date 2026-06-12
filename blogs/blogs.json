@@ -1,0 +1,8 @@
+{
+  "name": "ROR Blog",
+  "description": "Official blog of the Research Organization Registry (ROR), covering updates, integrations, community stories, and open scholarly infrastructure news.",
+  "url": "https://ror.org/blog/",
+  "rssUrl": "https://ror.org/feed.xml",
+  "type": "Atom",
+  "posts": []
+}
