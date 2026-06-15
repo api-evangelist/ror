@@ -4,5 +4,14 @@
   "url": "https://ror.org/blog/",
   "rssUrl": "https://ror.org/feed.xml",
   "type": "Atom",
-  "posts": []
+  "posts": [],
+  "repo": "ror",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/ror-research-organization-registry",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
