@@ -11,7 +11,7 @@ description: >-
   retrieving organization records, and is integrated as the preferred
   organization identifier across Crossref, DataCite, and ORCID platforms.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Research
   - Organizations
