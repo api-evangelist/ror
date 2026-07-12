@@ -53,6 +53,8 @@ apis:
 
 common:
 
+  - type: DomainSecurity
+    url: security/ror-domain-security.yml
   - type: Website
     url: https://ror.org/
 
