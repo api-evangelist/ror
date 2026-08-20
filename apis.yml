@@ -26,6 +26,14 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ror.png
 tags:
   - Research
+  - Organization
+  - Identifiers
+  - Registry
+  - Scholarly
+  - Open Data
+  - Persistent Identifiers
+tags_raw:
+  - Research
   - Organizations
   - Identifiers
   - Registry
