@@ -85,3 +85,24 @@ plans:
         limit: true
         price: 0.00
         currency: USD
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Free (No Client ID)
+    access: free
+    model: free
+    model_how: derived
+    units: []
+    periods:
+    - minute
+  - name: Free (With Client ID)
+    access: freemium
+    model: free
+    model_how: derived
+    units: []
+    periods:
+    - minute
