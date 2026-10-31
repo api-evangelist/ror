@@ -1,4 +1,4 @@
-# ROR (ror)
+# ROR
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,57 +64,112 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ROR (Research Organization Registry) is a global, community-led, curated registry of open persistent identifiers for research organizations. It provides unique, stable ROR IDs for over 120,000 universities, companies, government labs, nonprofits, and other organizations involved in scholarly research. The registry is governed collaboratively by California Digital Library, Crossref, and DataCite, with all data available under the CC0 license and accessible via a free REST API.
+ROR (Research Organization Registry) is a global, community-led, curated registry of open persistent identifiers for research organizations. It provides unique, stable identifiers (ROR IDs) for over 120,000 universities, companies, government labs, nonprofits, and other organizations involved in scholarly research. The registry is maintained collaboratively by California Digital Library, Crossref, and DataCite, with all data available under the CC0 license. ROR offers a free REST API for querying, searching, and retrieving organization records, and is integrated as the preferred organization identifier across Crossref, DataCite, and ORCID platforms.
 
-APIs.json: [https://raw.githubusercontent.com/api-evangelist/ror/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ror/refs/heads/main/apis.yml)
+**Areas:** Research · Organization · Identifiers · Registry · Scholarly · Open Data · Persistent Identifiers
 
-Naftiko: [https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=ror-api-evangelist&utm_content=repo](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=ror-api-evangelist&utm_content=repo)
+## ROR on APIs.io
 
-## Tags
+Everything profiled for ROR is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ror/](https://apis.io/providers/ror/)** — or go straight to one of the APIs or properties below.
 
-- Research
-- Organizations
-- Identifiers
-- Registry
-- Scholarly
-- Open Data
-- Persistent Identifiers
+### APIs (1)
 
-## APIs
+- [ROR REST API](https://apis.io/apis/ror/ror-rest-api/) — The ROR REST API provides programmatic access to the Research Organization Registry, enabling users to retrieve, search, filter, and match organization…
 
-### ROR REST API
+### Published properties
 
-The ROR REST API provides programmatic access to the Research Organization Registry, enabling users to retrieve, search, filter, and match organization records by name, identifier, affiliation text, or metadata fields. Returns JSON responses with full record details including names, locations, external IDs, and organizational relationships.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Human URL: [https://ror.readme.io/docs/rest-api](https://ror.readme.io/docs/rest-api)
-- Base URL: [https://api.ror.org](https://api.ror.org)
+#### JSON-LD (1)
 
-## Plans / Rate Limits / FinOps
+Linked-data contexts for the provider's vocabulary.
 
-- Plans & Pricing: [plans/ror-plans-pricing.yml](plans/ror-plans-pricing.yml)
-- Rate Limits: [rate-limits/ror-rate-limits.yml](rate-limits/ror-rate-limits.yml)
-- FinOps: [finops/ror-finops.yml](finops/ror-finops.yml)
+- [Ror Context](https://apis.io/jsonld/ror/ror-context/)
 
-ROR provides completely free API access. No API key is currently required. Beginning Q3 2026, a free client ID registration will be required at [https://ror.org/api-client-id](https://ror.org/api-client-id) to maintain the standard rate limit of 2,000 requests per 5-minute window. Unregistered clients will be limited to 50 requests per 5-minute window.
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+- [Ror Domain Security](https://apis.io/security/ror/ror-domain-security/)
 
-## Common Properties
+#### Plans and pricing (1)
 
-| Type | URL |
-|------|-----|
-| Website | [https://ror.org/](https://ror.org/) |
-| Documentation | [https://ror.readme.io/](https://ror.readme.io/) |
-| GitHub Organization | [https://github.com/ror-community](https://github.com/ror-community) |
-| LinkedIn | [https://www.linkedin.com/company/ror-research-organization-registry](https://www.linkedin.com/company/ror-research-organization-registry) |
-| Blog | [https://ror.org/blog/](https://ror.org/blog/) |
-| Pricing | [https://ror.org/api-client-id](https://ror.org/api-client-id) |
-| Status Page | [https://ror1.statuspage.io/](https://ror1.statuspage.io/) |
-| X / Twitter | [https://twitter.com/ResearchOrgs](https://twitter.com/ResearchOrgs) |
+Published plans, tiers and prices.
 
-## Maintainers
+- [Ror Plans Pricing](https://apis.io/plans/ror/ror-plans-pricing/)
 
-- Kin Lane / [kin@apievangelist.com](mailto:kin@apievangelist.com)
+#### Rate limits (1)
+
+Published request limits.
+
+- [Ror Rate Limits](https://apis.io/rate-limits/ror/ror-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Ror Finops](https://apis.io/finops/ror/ror-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://ror.org/)
+- [Documentation](https://ror.readme.io/)
+- [Pricing](https://ror.org/api-client-id)
+- [Blog](https://ror.org/blog/)
+- [GitHub](https://github.com/ror-community)
+- [Status](https://ror1.statuspage.io/)
+
+## API Evangelist rating
+
+**Kin Score 25.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 38.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 42.1 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 15.8 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.8** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ror/](https://apis.io/providers/ror/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ROR: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ror/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
